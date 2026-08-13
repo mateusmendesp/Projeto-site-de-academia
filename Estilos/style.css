@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   grid-area: 1 / 1 / 2 / -1;
-  background-color: black;
+  background-color: rgb(2, 2, 2);
 }
 
 #header img {
