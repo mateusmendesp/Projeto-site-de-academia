@@ -12,7 +12,7 @@
   --fundoprincipal: #181010;
   --fundocards: #171717;
   --textos: #f5f5f5;
-  --textosdestaques: #de1014;
+  --textosdestaques: #DE1014;
   --textosecundario: #aaaaaa;
 }
 
@@ -45,48 +45,48 @@ body {
 }
 
 #menu {
-  display: flex;
-  justify-content: center;
-  grid-area: 2 / 1 / 3 / -1;
-  background-color: var(--destaque-inverso);
-  text-align: center;
-  flex-wrap: wrap;
-  margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    grid-area: 2 / 1 / 3 / -1;
+    background-color: var(--destaque-inverso);
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
 }
-#menu ul {
-  display: flex;
-  gap: 15px;
-  text-align: center;
-  padding: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+#menu ul{
+    display: flex;
+    gap: 15px;
+        text-align: center;
+        padding: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
 }
-#menu li {
-  list-style-type: none;
-  background-color: var(--fundocards);
-  border: 1px solid var(--destaque-inverso);
-  padding: 3px;
-  padding-top: 7px;
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-bottom: 7px;
-  font-size: 1.08em;
+#menu li{
+    list-style-type: none;
+    background-color: var(--fundocards);
+            border: 1px solid var(--destaque-inverso);
+            padding: 3px;
+            padding-top: 7px;
+            padding-left: 8px;
+            padding-right:8px;
+            padding-bottom: 7px;
+            font-size: 1.08em;
 }
 #menu a {
-  text-decoration: none;
-  color: var(--textosdestaques);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  display: block; /* ocupa toda a área */
-  width: 100%;
-  height: 100%;
+    text-decoration: none;
+    color: var(--textosdestaques);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    display: block;  /* ocupa toda a área */
+    width: 100%;
+    height: 100%;
 }
-#menu li:hover {
-  background-color: var(--textosecundario);
-  transition-duration: 0.25s;
+#menu li:hover{
+    background-color: var(--textosecundario);
+    transition-duration: 0.25s;
 }
 #menu li:hover a {
-  color: var(--fundoprincipal); /* texto também muda */
+    color: var(--fundoprincipal);  /* texto também muda */
 }
 
 #main {
@@ -103,72 +103,57 @@ body {
   align-items: flex-end;
 }
 
-#main .caixa {
-  background-color: rgba(0, 0, 0, 0.8);
+#main .caixa{
+  background-color: rgba(0, 0, 0, 0.80);
   width: 50%;
   height: 100%;
   padding: 15px;
 }
 
-#main h2 {
+#main h2{
   font-family: "Oswald";
-  font-size: 2em;
+  font-size: 2.0em;
   letter-spacing: 0.02em;
-  color: var(--textosdestaques);
-  text-shadow: 1px 1px rgba(245, 245, 245, 0.188);
+    color: var(--textosdestaques);
+    text-shadow: 1px 1px rgba(245, 245, 245, 0.188);
+
 }
-#main h3 {
+#main h3{
   font-family: "Oswald";
   font-size: 1.5em;
-  color: var(--textosdestaques);
-  letter-spacing: 0.01em;
+    color: var(--textosdestaques);
+    letter-spacing: 0.01em;
 }
-#main p {
-  font-family: "Oswald";
+#main p{
+   font-family: "Oswald";
   font-size: 1.2em;
-  color: var(--textosecundario);
-  letter-spacing: 0.01em;
-  margin-top: 10%;
-  margin-bottom: 12%;
+    color: var(--textosecundario);
+    letter-spacing: 0.01em;
+    margin-top: 10%;
+        margin-bottom: 12%;
+
 }
 
 #main a {
-  text-align: center;
-
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-  font-size: 1.05em;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--textosdestaques);
-  padding: 8px 10px;
-  border: 1px solid var(--textosecundario);
-  border-radius: 8px;
-  text-decoration: none;
-  margin-bottom: 20px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center !important;  /* force */
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--textosdestaques);
+    padding: 8px 15px;
+    border: 1px solid var(--textosecundario);
+    border-radius: 8px;
+    text-decoration: none;
 }
 
-#main a:hover {
-  background-color: var(--textosecundario);
+#dados p{
+   font-size: clamp(0.74rem, 1.5vw, 1.2rem);
 }
 
-#dados {
-  display: flex;
-  grid-area: 4 / 1 / 5 / -1;
-  justify-content: space-around;
-  gap: 0px;
-  background-color: var(--textosecundario);
-  color: var(--textosdestaques);
-  align-items: center;
-  flex-wrap: wrap;
-  font-weight: 600;
-}
-#dados p {
-  font-size: clamp(0.74rem, 1.5vw, 1.2rem);
-}
-
-#article {
+#article{
   grid-area: 5/1/6/-1;
   display: flex;
   background-color: var(--fundocards);
@@ -178,25 +163,25 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
-#article h2 {
-  font-family: "Oswald";
+#article h2{
+font-family: "Oswald";
   font-size: 2.1em;
   letter-spacing: 0.02em;
-  color: var(--textosdestaques);
-  text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
-  text-align: center;
+    color: var(--textosdestaques);
+    text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
+text-align: center;
 }
-#article ul {
+#article ul{
   list-style: none;
 }
-#article h3 {
+#article h3{
   font-family: "Oswald";
   font-size: 1.6em;
   letter-spacing: 0.02em;
-  color: var(--textosdestaques);
-  text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
+    color: var(--textosdestaques);
+    text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
 }
-#article p {
+#article p{
   font-size: 1.01em;
   text-indent: 25px;
   margin-top: 3px;
@@ -310,13 +295,13 @@ body {
   color: var(--textosdestaques);
 }
 
-#footer {
+#footer{
   background-color: black;
   grid-area: -2 / 1 / -1 /-1;
-  display: flex;
-  justify-content: center;
-  padding: 0px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    flex-wrap: wrap ;
+    flex-direction: column;
+    align-items: center;
+  }
