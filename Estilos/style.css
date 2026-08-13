@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundoprincipal: #181010;
+  --fundocards: #171717;
+  --textos: #f5f5f5;
+  --textosdestaques: #DE1014;
+  --textosecundario: #aaaaaa;
+}
+
+body {
+  font-family: "Montserrat";
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--fundoprincipal);
+  color: var(--textos);
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: 220vh;
+  grid-template-rows: 120px 40px 2.5fr 40px 1.8fr 2fr 80px;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  grid-area: 1 / 1 / 2 / -1;
+  background-color: black;
+}
+
+#header img {
+  max-height: 120px;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    grid-area: 2 / 1 / 3 / -1;
+    background-color: var(--destaque-inverso);
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+#menu ul{
+    display: flex;
+    gap: 15px;
+        text-align: center;
+        padding: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+}
+#menu li{
+    list-style-type: none;
+    background-color: var(--fundocards);
+            border: 1px solid var(--destaque-inverso);
+            padding: 3px;
+            padding-top: 7px;
+            padding-left: 8px;
+            padding-right:8px;
+            padding-bottom: 7px;
+            font-size: 1.08em;
+}
+#menu a {
+    text-decoration: none;
+    color: var(--textosdestaques);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    display: block;  /* ocupa toda a área */
+    width: 100%;
+    height: 100%;
+}
+#menu li:hover{
+    background-color: var(--textosecundario);
+    transition-duration: 0.25s;
+}
+#menu li:hover a {
+    color: var(--fundoprincipal);  /* texto também muda */
+}
+
+#main {
+  grid-area: 3 / 1 / 4 / -1;
+  background: var(--fundoprincipal) url("../imagens/fundo.png") no-repeat;
+  background-size: cover;
+  margin-top: 15px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: right;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+#main .caixa{
+  background-color: rgba(0, 0, 0, 0.80);
+  width: 45%;
+  height: 100%;
+  padding: 15px;
+}
+
+#main h2{
+  font-family: "Oswald";
+  font-size: 2.0em;
+  letter-spacing: 0.02em;
+    color: var(--textosdestaques);
+    text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
+
+}
+#main h3{
+  font-family: "Oswald";
+  font-size: 1.5em;
+    color: var(--textosdestaques);
+    letter-spacing: 0.01em;
+}
+#main p{
+   font-family: "Oswald";
+  font-size: 1.2em;
+    color: var(--textosecundario);
+    letter-spacing: 0.01em;
+    margin-top: 10%;
+        margin-bottom: 12%;
+
+}
+
+#main a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 1.05em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--textosdestaques);
+    padding: 8px 15px;
+    border: 1px solid var(--textosecundario);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+#main a:hover{
+  background-color: var(--textosecundario);
+}
+
+
+#dados{
+  display: flex;
+  grid-area: 4 / 1 / 5 / -1;
+  justify-content: space-around;
+  gap: 0px;
+  background-color: var(--textosecundario);
+  color: var(--textosdestaques);
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+#dados p{
+   font-size: clamp(0.74rem, 1.5vw, 1.2rem);
+}
+
+#article{
+  grid-area: 5/1/6/-1;
+  display: flex;
+  background-color: var(--fundocards);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#article h2{
+font-family: "Oswald";
+  font-size: 2.1em;
+  letter-spacing: 0.02em;
+    color: var(--textosdestaques);
+    text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
+text-align: center;
+}
+#article ul{
+  list-style: none;
+}
+#article h3{
+  font-family: "Oswald";
+  font-size: 1.6em;
+  letter-spacing: 0.02em;
+    color: var(--textosdestaques);
+    text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
+}
+#article p{
+  font-size: 1.01em;
+  text-indent: 25px;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+#aside {
+  grid-area: 6/1/7/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #181010 0%, #1a1515 100%);
+}
+
+#aside h2 {
+  font-family: "Oswald";
+  font-size: clamp(1.8em, 5vw, 2.5em);
+  letter-spacing: 0.02em;
+  color: var(--textosdestaques);
+  text-shadow: 1px 1px rgba(245, 245, 245, 0.288);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#aside > p {
+  text-align: center;
+  color: var(--textosecundario);
+  font-size: clamp(0.95em, 2vw, 1.05em);
+  margin-bottom: 20px;
+}
+
+#aside .planos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+#aside .plano {
+  background-color: var(--fundocards);
+  border: 2px solid var(--textosecundario);
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#aside .plano:hover {
+  border-color: var(--textosdestaques);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(222, 16, 20, 0.3);
+}
+
+#aside .plano h3 {
+  font-family: "Oswald";
+  font-size: 1.5em;
+  color: var(--textosdestaques);
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+#aside .plano h4 {
+  font-family: "Oswald";
+  font-size: 1.3em;
+  color: var(--textosecundario);
+  text-align: center;
+  font-weight: 700;
+}
+
+#aside .plano ul {
+  list-style: none;
+  flex-grow: 1;
+}
+
+#aside .plano li {
+  font-size: 0.95em;
+  color: var(--textos);
+  padding: 8px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+#aside .plano li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--textosdestaques);
+  font-weight: bold;
+}
+
+#aside .plano a {
+  display: block;
+  text-align: center;
+  background-color: var(--textosdestaques);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95em;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  border: 2px solid var(--textosdestaques);
+}
+
+#aside .plano a:hover {
+  background-color: transparent;
+  color: var(--textosdestaques);
+}
+
+#footer{
+  background-color: black;
+  grid-area: -2 / 1 / -1 /-1;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    flex-wrap: wrap ;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#footer img{
+  height: 80px;
+}
